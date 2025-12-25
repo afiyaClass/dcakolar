@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daniyal Computer Academy</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .section-title{
+        margin-top: 3.5em;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="{% static 'images/main1.png' %}" alt="Daniyal Computer Academy Logo" class="logo-img">
+        <div class="text-content">
+            <h1>Daniyal Computer Academic</h1>
+            <p>Your Path to Excellence in IT Training, Kolar, Karnataka</p>
+        </div>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html">Contact us</a>
+    </nav>
+</header>
+{% block content %}
+<section class="about" id="about">
+    <img src="{% static 'images/bg_all.jpg' %}" class="section-bg">
+    <h2 class="section-title">About Daniyal Computer Academy</h2>
+
+    <div class="about-intro">
+        <p>
+            At Daniyal Computer Academy, located in Kolar, Karnataka, we are proud to
+            be the first institute in the region offering top-tier IT education.
+        </p>
+    </div>
+    <div class="about-container">
+        <div class="about-card" data-animate="right">
+            <img src="{% static 'images/education.png' %}" alt="Quality Education">
+            <h3>Quality Education</h3>
+            <p>
+                Daniyal Computer Academy is committed to delivering high-quality
+                computer education across a wide range of IT courses, equipping students with the skills needed to excel in today’s tech-driven world.
+            </p>
+        </div>
+        <div class="about-card" data-animate="left">
+            <img src="{% static 'images/expert.png' %}" alt="Expert Trainers">
+            <h3>Expert Trainers</h3>
+            <p>
+                Our certified trainers guide students personally to master
+                modern technologies with confidence.
+            </p>
+        </div>
+        <div class="about-card" data-animate="right">
+            <img src="{% static 'images/cg2.png' %}" alt="Career Growth">
+            <h3>Career Growth</h3>
+            <p>
+                With comprehensive courses in various fields like programming, web development, Microsoft Office, and TallyPrime, we are dedicated to helping you achieve your career goals and personal growth through expert-led training.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+<!-- FOOTER SECTION -->
+
+<footer class="site-footer">
+    <!-- FAQ Section -->
+    <div class="footer-faq-wix">
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+
+        <div class="faq-list">
+            <div class="faq-row">
+                <div class="faq-q">
+                    Do I need any prior knowledge?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-a">
+                    No prior knowledge is required for basic courses. Some advanced courses may need prior programming experience.
+                </div>
+            </div>
+
+            <div class="faq-row">
+                <div class="faq-q">
+                    How can I enroll?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-a">
+                    You can enroll by contacting us through the website, visiting our academy, or clicking the Enroll Now button.
+                </div>
+            </div>
+
+            <div class="faq-row">
+                <div class="faq-q">
+                    Do I receive a certificate after completing a course?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-a">
+                    Yes, you will receive a certificate after successful completion of the course.
+                </div>
+            </div>
+
+            <div class="faq-row">
+                <div class="faq-q">
+                    Will I need any prior experience in IT to start?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-a">
+                    No prior IT experience is required. We start from basics.
+                </div>
+            </div>
+
+            <div class="faq-row">
+                <div class="faq-q">
+                    What is the duration of each course?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-a">
+                    Course duration varies depending on the program.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer CTA -->
+    <div class="footer-content">
+        <div class="footer-text">
+            <h3>Get Enroll Today</h3>
+            <p>Have questions or want to start your IT journey with us? We’re here to help you grow.</p>
+        </div>
+
+        <div class="footer-action">
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+        </div>
+    </div>
+
+    <!-- Bottom Text -->
+    <div class="footer-bottom">
+        <p>© 2025 Daniyal Computer Academy | All Rights Reserved</p>
+    </div>
+</footer>
+
+<!-- CHAT-BOT -->
+<div class="chatbot-tooltip-wrapper">
+    <div class="chatbot-btn" id="chatbotBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a2 2 0 0 0 1.414-.586l3.414-3.414A2 2 0 0 0 16 8.586V4a2 2 0 0 0-2-2H2z"/>
+        </svg>
+    </div>
+    <div class="chatbot-tooltip">Chat with Daniyal Assistant</div>
+</div>
+
+<div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+        Daniyal Assistant
+        <span id="closeChat">✕</span>
+    </div>
+
+    <div class="chatbot-body" id="chatbotBody"></div>
+
+    <div class="chatbot-input">
+        <input type="text" id="chatInput" placeholder="Type your message..." />
+        <button id="sendChat">➤</button>
+    </div>
+</div>
+<!-- WHATSAPP BUTTON -->
+<div class="whatsapp-btn-wrapper">
+    <a href="https://wa.me/917337774927" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
